@@ -1,0 +1,31 @@
+{
+  "name": "InstaKit",
+  "version": "0.1.0",
+  "summary": "Instagram Kit with Core Data persistence.",
+  "homepage": "https://github.com/rinat-enikeev/InstaKit",
+  "license": "MIT",
+  "authors": {
+    "Rinat Enikeev": "rinat.enikeev@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/rinat-enikeev/InstaKit.git",
+    "tag": "0.1.0"
+  },
+  "description": "Instagram Kit with Core Data persistence.",
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "InstaKit": [
+      "Pod/Classes/**/*.xcdatamodeld"
+    ]
+  },
+  "frameworks": "CoreData",
+  "dependencies": {
+    "RestKit": [
+
+    ]
+  }
+}
