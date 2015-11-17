@@ -1,5 +1,5 @@
 //
-//  REInstaPost+InstaPost.h
+//  REInstaTag+InstaTag.h
 //  Pods
 //
 //  Created by Rinat Enikeev on 18/11/15.
@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-#import "InstaPost.h"
+#import "InstaTag.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface REInstaPost (InstaPostAdapter) <InstaPost>
+@interface REInstaTag (InstaTagAdapter) <InstaTag>
 
 @end
 

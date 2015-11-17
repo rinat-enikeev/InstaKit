@@ -1,14 +1,14 @@
 //
-//  REInstaPost+InstaPost.m
+//  REInstaCaption+InstaCaption.m
 //  Pods
 //
 //  Created by Rinat Enikeev on 18/11/15.
 //
 //
 
-#import "REInstaPost+InstaPost.h"
+#import "REInstaCaption+InstaCaption.h"
 
-@implementation REInstaPost (InstaPostAdapter)
+@implementation REInstaCaption(InstaCaptionAdapter)
 
 -(NSDate*)created {
     return [NSDate dateWithTimeIntervalSince1970:[[self createdTimestamp] doubleValue]];

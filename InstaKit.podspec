@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
   s.dependency 'RestKit'
   s.dependency 'InstaModel'
 
-  s.prefix_header_contents = '#import <CoreData/CoreData.h>', '#import <RestKit/RestKit.h>', '#import <InstaModel/InstaModel.h>'
+  s.prefix_header_contents = '#import <CoreData/CoreData.h>', '#import <RestKit/RestKit.h>', '#import <InstaModel/InstaModel.h>', '#import "REInstaModel.h"'
 
 end

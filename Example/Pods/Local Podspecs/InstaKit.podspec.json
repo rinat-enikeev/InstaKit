@@ -35,6 +35,7 @@
   "prefix_header_contents": [
     "#import <CoreData/CoreData.h>",
     "#import <RestKit/RestKit.h>",
-    "#import <InstaModel/InstaModel.h>"
+    "#import <InstaModel/InstaModel.h>",
+    "#import \"REInstaModel.h\""
   ]
 }
