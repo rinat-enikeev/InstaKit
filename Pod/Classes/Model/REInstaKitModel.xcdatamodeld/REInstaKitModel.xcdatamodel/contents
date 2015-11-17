@@ -48,9 +48,9 @@
         <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="posts" inverseEntity="REInstaUser" syncable="YES"/>
         <relationship name="caption" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaCaption" inverseName="post" inverseEntity="REInstaCaption" syncable="YES"/>
         <relationship name="comments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="REInstaComment" inverseName="post" inverseEntity="REInstaComment" syncable="YES"/>
-        <relationship name="imageLow" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="REInstaImage" inverseName="postLow" inverseEntity="REInstaImage" syncable="YES"/>
-        <relationship name="imageStd" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="REInstaImage" inverseName="postStd" inverseEntity="REInstaImage" syncable="YES"/>
-        <relationship name="imageThumb" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="REInstaImage" inverseName="postThumb" inverseEntity="REInstaImage" syncable="YES"/>
+        <relationship name="imageLow" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaImage" inverseName="postLow" inverseEntity="REInstaImage" syncable="YES"/>
+        <relationship name="imageStd" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaImage" inverseName="postStd" inverseEntity="REInstaImage" syncable="YES"/>
+        <relationship name="imageThumb" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaImage" inverseName="postThumb" inverseEntity="REInstaImage" syncable="YES"/>
         <relationship name="likers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="likes" inverseEntity="REInstaUser" syncable="YES"/>
         <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaLocation" inverseName="post" inverseEntity="REInstaLocation" syncable="YES"/>
         <relationship name="tags" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="REInstaTag" inverseName="posts" inverseEntity="REInstaTag" syncable="YES"/>
@@ -101,9 +101,9 @@
         <attribute name="localPath" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <relationship name="postLowBand" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="REInstaPost" inverseName="videoLowBand" inverseEntity="REInstaPost" syncable="YES"/>
-        <relationship name="postLowRes" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="REInstaPost" inverseName="videoLowRes" inverseEntity="REInstaPost" syncable="YES"/>
-        <relationship name="postStdRes" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="REInstaPost" inverseName="videoStdRes" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="postLowBand" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="REInstaPost" inverseName="videoLowBand" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="postLowRes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="REInstaPost" inverseName="videoLowRes" inverseEntity="REInstaPost" syncable="YES"/>
+        <relationship name="postStdRes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="REInstaPost" inverseName="videoStdRes" inverseEntity="REInstaPost" syncable="YES"/>
     </entity>
     <elements>
         <element name="REInstaAttribution" positionX="0" positionY="135" width="128" height="75"/>

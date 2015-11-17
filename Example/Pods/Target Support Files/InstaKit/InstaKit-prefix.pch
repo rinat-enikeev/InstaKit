@@ -4,3 +4,4 @@
 
 #import <CoreData/CoreData.h>
 #import <RestKit/RestKit.h>
+#import <InstaModel/InstaModel.h>

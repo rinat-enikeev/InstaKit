@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02A49A9A8B65E54C3260B54F /* Pods_InstaKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60EBAFA1A051B177A784AD /* Pods_InstaKit_Tests.framework */; };
+		0EC131511BFBC040006BD079 /* STXFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC131501BFBC040006BD079 /* STXFeedViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -37,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		0294E3099FBAA020D18C5A24 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0EC1314F1BFBC03F006BD079 /* STXFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STXFeedViewController.h; sourceTree = "<group>"; };
+		0EC131501BFBC040006BD079 /* STXFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STXFeedViewController.m; sourceTree = "<group>"; };
 		33F8AE33E25091616374CDEB /* Pods-InstaKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaKit_Tests/Pods-InstaKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		47648C3FF5FB085EA43510DE /* Pods-InstaKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKit_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaKit_Example/Pods-InstaKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4F578B697B537E950ADC7BB6 /* Pods_InstaKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,6 +136,8 @@
 				6003F59C195388D20070C39A /* REAppDelegate.h */,
 				6003F59D195388D20070C39A /* REAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
+				0EC1314F1BFBC03F006BD079 /* STXFeedViewController.h */,
+				0EC131501BFBC040006BD079 /* STXFeedViewController.m */,
 				6003F5A5195388D20070C39A /* REViewController.h */,
 				6003F5A6195388D20070C39A /* REViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -390,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EC131511BFBC040006BD079 /* STXFeedViewController.m in Sources */,
 				6003F59E195388D20070C39A /* REAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* REViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,

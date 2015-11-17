@@ -23,7 +23,8 @@ Pod::Spec.new do |s|
   s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'CoreData'
   s.dependency 'RestKit'
+  s.dependency 'InstaModel'
 
-  s.prefix_header_contents = '#import <CoreData/CoreData.h>', '#import <RestKit/RestKit.h>'
+  s.prefix_header_contents = '#import <CoreData/CoreData.h>', '#import <RestKit/RestKit.h>', '#import <InstaModel/InstaModel.h>'
 
 end

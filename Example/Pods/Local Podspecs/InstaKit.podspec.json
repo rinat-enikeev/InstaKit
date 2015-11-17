@@ -27,10 +27,14 @@
   "dependencies": {
     "RestKit": [
 
+    ],
+    "InstaModel": [
+
     ]
   },
   "prefix_header_contents": [
     "#import <CoreData/CoreData.h>",
-    "#import <RestKit/RestKit.h>"
+    "#import <RestKit/RestKit.h>",
+    "#import <InstaModel/InstaModel.h>"
   ]
 }

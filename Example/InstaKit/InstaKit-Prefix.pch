@@ -13,4 +13,6 @@
 #ifdef __OBJC__
     @import UIKit;
     @import Foundation;
+    #import <InstaKit/InstaKit.h>
+    #import <STXInstagramFeedView/STXDynamicTableView.h>
 #endif
