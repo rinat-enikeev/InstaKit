@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSNumber *userHasLiked;
 @property (nullable, nonatomic, retain) NSNumber *distance;
 @property (nullable, nonatomic, retain) REInstaUser *author;
+@property (nullable, nonatomic, retain) REInstaCaption *caption;
 @property (nullable, nonatomic, retain) REInstaImage *imageLow;
 @property (nullable, nonatomic, retain) REInstaImage *imageStd;
 @property (nullable, nonatomic, retain) REInstaImage *imageThumb;

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class REInstaAttribution, REInstaImage, REInstaTag, REInstaUser, REInstaUserOnPost, REInstaVideo;
+@class REInstaAttribution, REInstaImage, REInstaTag, REInstaUser, REInstaUserOnPost, REInstaVideo, REInstaCaption;
 
 NS_ASSUME_NONNULL_BEGIN
 

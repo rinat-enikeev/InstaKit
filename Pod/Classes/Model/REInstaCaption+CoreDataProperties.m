@@ -17,5 +17,6 @@
 @dynamic identifier;
 @dynamic text;
 @dynamic from;
+@dynamic post;
 
 @end

@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *identifier;
 @property (nullable, nonatomic, retain) NSString *text;
 @property (nullable, nonatomic, retain) REInstaUser *from;
+@property (nullable, nonatomic, retain) REInstaPost *post;
 
 @end
 

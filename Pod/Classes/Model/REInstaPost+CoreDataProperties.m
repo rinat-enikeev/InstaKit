@@ -33,5 +33,6 @@
 @dynamic videoStdRes;
 @dynamic attribution;
 @dynamic usersOnPost;
+@dynamic caption;
 
 @end

@@ -9,6 +9,7 @@
         <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="text" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="from" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="captions" inverseEntity="REInstaUser" syncable="YES"/>
+        <relationship name="post" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaPost" inverseName="caption" inverseEntity="REInstaPost" syncable="YES"/>
     </entity>
     <entity name="REInstaComment" representedClassName="REInstaComment" syncable="YES">
         <attribute name="createdTimestamp" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
@@ -43,6 +44,7 @@
         <attribute name="userHasLiked" optional="YES" attributeType="Boolean" syncable="YES"/>
         <relationship name="attribution" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaAttribution" inverseName="posts" inverseEntity="REInstaAttribution" syncable="YES"/>
         <relationship name="author" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaUser" inverseName="posts" inverseEntity="REInstaUser" syncable="YES"/>
+        <relationship name="caption" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="REInstaCaption" inverseName="post" inverseEntity="REInstaCaption" syncable="YES"/>
         <relationship name="imageLow" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="REInstaImage" inverseName="postLow" inverseEntity="REInstaImage" syncable="YES"/>
         <relationship name="imageStd" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="REInstaImage" inverseName="postStd" inverseEntity="REInstaImage" syncable="YES"/>
         <relationship name="imageThumb" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="REInstaImage" inverseName="postThumb" inverseEntity="REInstaImage" syncable="YES"/>
@@ -101,11 +103,11 @@
     </entity>
     <elements>
         <element name="REInstaAttribution" positionX="0" positionY="135" width="128" height="75"/>
-        <element name="REInstaCaption" positionX="-36" positionY="9" width="128" height="105"/>
+        <element name="REInstaCaption" positionX="-36" positionY="9" width="128" height="120"/>
         <element name="REInstaComment" positionX="-54" positionY="-9" width="128" height="105"/>
         <element name="REInstaImage" positionX="18" positionY="63" width="128" height="150"/>
         <element name="REInstaLocation" positionX="36" positionY="108" width="128" height="105"/>
-        <element name="REInstaPost" positionX="-63" positionY="-18" width="128" height="345"/>
+        <element name="REInstaPost" positionX="-63" positionY="-18" width="128" height="360"/>
         <element name="REInstaRelationship" positionX="-9" positionY="135" width="128" height="105"/>
         <element name="REInstaTag" positionX="-9" positionY="63" width="128" height="75"/>
         <element name="REInstaUser" positionX="-18" positionY="27" width="128" height="330"/>
