@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "InstaLocation.h"
+#import "REInstaLocation.h"
+
+@protocol InstaLocation;
 
 NS_ASSUME_NONNULL_BEGIN
 

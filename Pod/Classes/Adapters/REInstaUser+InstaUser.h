@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "REInstaUser.h"
 
-#import "InstaUser.h"
+@protocol InstaUser;
 
 NS_ASSUME_NONNULL_BEGIN
 

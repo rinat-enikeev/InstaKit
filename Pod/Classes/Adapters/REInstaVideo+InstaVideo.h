@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "REInstaVideo.h"
 
-#import "InstaVideo.h"
+@protocol InstaVideo;
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -11,6 +11,6 @@
 
 @implementation REInstaImage
 
-// Insert code here to add functionality to your managed object subclass
+@synthesize image;
 
 @end

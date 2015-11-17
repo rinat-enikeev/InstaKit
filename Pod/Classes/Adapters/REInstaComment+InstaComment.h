@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "InstaComment.h"
+#import "REInstaComment.h"
+
+@protocol InstaComment;
 
 NS_ASSUME_NONNULL_BEGIN
 

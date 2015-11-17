@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "REInstaCaption.h"
 
-#import "InstaCaption.h"
+@protocol InstaCaption;
 
 NS_ASSUME_NONNULL_BEGIN
 

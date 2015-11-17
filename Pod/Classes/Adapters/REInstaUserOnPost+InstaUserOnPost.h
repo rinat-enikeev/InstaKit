@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "InstaUserOnPost.h"
+#import "REInstaUserOnPost.h"
+
+@protocol InstaUserOnPost;
 
 NS_ASSUME_NONNULL_BEGIN
 

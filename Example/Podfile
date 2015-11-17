@@ -6,6 +6,7 @@ use_frameworks!
 target 'InstaKit_Example', :exclusive => true do
   pod "InstaKit", :path => "../"
   pod 'STXInstagramFeedView'
+  pod 'InstaModel'
 end
 
 target 'InstaKit_Tests', :exclusive => true do

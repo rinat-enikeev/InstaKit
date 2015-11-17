@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'F9120AAAFAF74EC7340E44DA'
+               BlueprintIdentifier = 'D7FB7AA1517B71C8692AAC77'
                BlueprintName = 'InstaKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'InstaKit.framework'>

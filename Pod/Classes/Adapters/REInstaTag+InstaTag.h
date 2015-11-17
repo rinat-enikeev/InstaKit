@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "REInstaTag.h"
 
-#import "InstaTag.h"
+@protocol InstaTag;
 
 NS_ASSUME_NONNULL_BEGIN
 

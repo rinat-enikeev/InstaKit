@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "REInstaPost.h"
 
-#import "InstaPost.h"
+@protocol InstaPost;
 
 NS_ASSUME_NONNULL_BEGIN
 

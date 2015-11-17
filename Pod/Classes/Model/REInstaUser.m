@@ -15,6 +15,6 @@
 
 @implementation REInstaUser
 
-// Insert code here to add functionality to your managed object subclass
+@synthesize profilePicture;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "REViewController.h"
 #import <InstaKit/InstaKit.h>
+#import <InstaModel/InstaModel.h>
 
 @interface REViewController ()
 

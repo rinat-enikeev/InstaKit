@@ -7,6 +7,7 @@
 //
 
 #import "REInstaImage+InstaImage.h"
+#import "InstaImage.h"
 
 @implementation REInstaImage(InstaImageAdapter)
 

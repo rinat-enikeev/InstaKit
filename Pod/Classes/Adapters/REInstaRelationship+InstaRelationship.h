@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "REInstaRelationship.h"
 
-#import "InstaRelationship.h"
+@protocol InstaRelationship;
 
 NS_ASSUME_NONNULL_BEGIN
 

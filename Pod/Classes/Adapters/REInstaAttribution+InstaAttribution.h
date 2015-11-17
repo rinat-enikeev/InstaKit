@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "REInstaAttribution.h"
 
-#import "InstaAttribution.h"
+@protocol InstaAttribution;
 
 NS_ASSUME_NONNULL_BEGIN
 
