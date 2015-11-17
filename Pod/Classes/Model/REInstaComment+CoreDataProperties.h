@@ -2,7 +2,7 @@
 //  REInstaComment+CoreDataProperties.h
 //  Pods
 //
-//  Created by Rinat Enikeev on 17/11/15.
+//  Created by Rinat Enikeev on 18/11/15.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -19,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, retain) NSString *identifier;
 @property (nullable, nonatomic, retain) NSString *text;
 @property (nullable, nonatomic, retain) REInstaUser *from;
+@property (nullable, nonatomic, retain) REInstaPost *post;
 
 @end
 

@@ -2,7 +2,7 @@
 //  REInstaPost+CoreDataProperties.h
 //  Pods
 //
-//  Created by Rinat Enikeev on 17/11/15.
+//  Created by Rinat Enikeev on 18/11/15.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -17,25 +17,27 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSNumber *commentsCount;
 @property (nullable, nonatomic, retain) NSNumber *createdTimestamp;
+@property (nullable, nonatomic, retain) NSNumber *distance;
 @property (nullable, nonatomic, retain) NSString *filter;
 @property (nullable, nonatomic, retain) NSString *identifier;
 @property (nullable, nonatomic, retain) NSNumber *likesCount;
 @property (nullable, nonatomic, retain) NSString *link;
 @property (nullable, nonatomic, retain) NSString *type;
 @property (nullable, nonatomic, retain) NSNumber *userHasLiked;
-@property (nullable, nonatomic, retain) NSNumber *distance;
+@property (nullable, nonatomic, retain) REInstaAttribution *attribution;
 @property (nullable, nonatomic, retain) REInstaUser *author;
-@property (nullable, nonatomic, retain) REInstaCaption *caption;
 @property (nullable, nonatomic, retain) REInstaImage *imageLow;
 @property (nullable, nonatomic, retain) REInstaImage *imageStd;
 @property (nullable, nonatomic, retain) REInstaImage *imageThumb;
 @property (nullable, nonatomic, retain) NSSet<REInstaUser *> *likers;
 @property (nullable, nonatomic, retain) NSSet<REInstaTag *> *tags;
+@property (nullable, nonatomic, retain) NSSet<REInstaUserOnPost *> *usersOnPost;
 @property (nullable, nonatomic, retain) REInstaVideo *videoLowBand;
 @property (nullable, nonatomic, retain) REInstaVideo *videoLowRes;
 @property (nullable, nonatomic, retain) REInstaVideo *videoStdRes;
-@property (nullable, nonatomic, retain) REInstaAttribution *attribution;
-@property (nullable, nonatomic, retain) NSSet<REInstaUserOnPost *> *usersOnPost;
+@property (nullable, nonatomic, retain) REInstaCaption *caption;
+@property (nullable, nonatomic, retain) REInstaLocation *location;
+@property (nullable, nonatomic, retain) NSSet<REInstaComment *> *comments;
 
 @end
 
@@ -55,6 +57,11 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)removeUsersOnPostObject:(REInstaUserOnPost *)value;
 - (void)addUsersOnPost:(NSSet<REInstaUserOnPost *> *)values;
 - (void)removeUsersOnPost:(NSSet<REInstaUserOnPost *> *)values;
+
+- (void)addCommentsObject:(REInstaComment *)value;
+- (void)removeCommentsObject:(REInstaComment *)value;
+- (void)addComments:(NSSet<REInstaComment *> *)values;
+- (void)removeComments:(NSSet<REInstaComment *> *)values;
 
 @end
 

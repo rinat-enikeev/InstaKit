@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+#import "InstaPost.h"
 #import "InstaKit.h"
 #import "REInstaRKMapper.h"
 #import "REInstaAttribution+CoreDataProperties.h"

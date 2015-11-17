@@ -2,14 +2,14 @@
 //  REInstaComment.h
 //  Pods
 //
-//  Created by Rinat Enikeev on 17/11/15.
+//  Created by Rinat Enikeev on 18/11/15.
 //
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class REInstaUser;
+@class REInstaPost, REInstaUser;
 
 NS_ASSUME_NONNULL_BEGIN
 
