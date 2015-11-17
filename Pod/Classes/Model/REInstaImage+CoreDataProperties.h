@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nullable, nonatomic, retain) NSNumber *height;
 @property (nullable, nonatomic, retain) NSString *localPath;
-@property (nullable, nonatomic, retain) NSString *url;
+@property (nullable, nonatomic, retain) NSString *urlString;
 @property (nullable, nonatomic, retain) NSNumber *width;
 @property (nullable, nonatomic, retain) NSSet<REInstaPost *> *postLow;
 @property (nullable, nonatomic, retain) NSSet<REInstaPost *> *postStd;

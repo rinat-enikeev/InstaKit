@@ -67,6 +67,8 @@
     [_postDeep addPropertyMapping:stdImageMapping];
     
     
+    RKRelationshipMapping* likersMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"likes.data" toKeyPath:@"likers" withMapping:_user];
+    [_postDeep addPropertyMapping:likersMapping];
     
 }
 
@@ -117,7 +119,7 @@
     [_image addAttributeMappingsFromDictionary:
      @{
        @"height" : @"height",
-       @"url"    : @"url",
+       @"url"    : @"urlString",
        @"width"  : @"width"
        }];
 }

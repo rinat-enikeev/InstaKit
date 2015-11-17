@@ -15,7 +15,7 @@
 
 @dynamic height;
 @dynamic localPath;
-@dynamic url;
+@dynamic urlString;
 @dynamic width;
 @dynamic postLow;
 @dynamic postStd;
