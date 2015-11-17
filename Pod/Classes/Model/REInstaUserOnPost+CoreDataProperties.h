@@ -15,9 +15,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface REInstaUserOnPost (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) REInstaUser *user;
+@property (nullable, nonatomic, retain) NSNumber *x;
+@property (nullable, nonatomic, retain) NSNumber *y;
 @property (nullable, nonatomic, retain) REInstaPost *post;
-@property (nullable, nonatomic, retain) NSManagedObject *position;
+@property (nullable, nonatomic, retain) REInstaUser *user;
 
 @end
 

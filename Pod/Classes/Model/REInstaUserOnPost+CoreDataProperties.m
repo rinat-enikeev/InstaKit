@@ -13,8 +13,9 @@
 
 @implementation REInstaUserOnPost (CoreDataProperties)
 
-@dynamic user;
+@dynamic x;
+@dynamic y;
 @dynamic post;
-@dynamic position;
+@dynamic user;
 
 @end
