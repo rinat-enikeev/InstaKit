@@ -6,8 +6,8 @@
 //
 //
 
-#ifndef REBlockDefinitions_h
-#define REBlockDefinitions_h
+#ifndef REInstaBlockDefinitions_h
+#define REInstaBlockDefinitions_h
 
 
 typedef void (^REProgressBlock)(NSUInteger bytes, long long totalBytes, long long totalBytesExpected);
@@ -15,4 +15,4 @@ typedef void (^RESuccessBlock)(NSArray* objects);
 typedef void (^REFailureBlock)(NSError* error);
 
 
-#endif /* REBlockDefinitions_h */
+#endif /* REInstaBlockDefinitions_h */

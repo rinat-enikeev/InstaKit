@@ -2,3 +2,5 @@
 #import <UIKit/UIKit.h>
 #endif
 
+#import <CoreData/CoreData.h>
+#import <RestKit/RestKit.h>

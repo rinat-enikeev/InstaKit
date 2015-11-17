@@ -1,8 +1,11 @@
 source 'https://github.com/CocoaPods/Specs.git'
+source 'https://github.com/rinat-enikeev/CocoaPodsSpecs.git'
+
 use_frameworks!
 
 target 'InstaKit_Example', :exclusive => true do
   pod "InstaKit", :path => "../"
+  pod 'STXInstagramFeedView'
 end
 
 target 'InstaKit_Tests', :exclusive => true do

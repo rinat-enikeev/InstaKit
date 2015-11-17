@@ -7,6 +7,7 @@
 //
 
 #import "REViewController.h"
+#import <InstaKit/InstaKit.h>
 
 @interface REViewController ()
 
@@ -17,7 +18,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    InstaKit* kit = [[InstaKit alloc] initWithClientId:@"24fc1af302d3442c86e5e3c1e8708015" dbFileName:@"dbFile"];
+    [[kit postService] renewMediaPopularWithProgress:nil success:^(NSArray *objects) {
+        NSLog(@"%@", objects);
+        for (REInstaPost *post in objects) {
+            NSLog(@"%@", post.imageStd.url);
+        }
+    } failure:^(NSError *error) {
+        NSLog(@"%@", error.localizedDescription);
+    }];
 }
 
 - (void)didReceiveMemoryWarning

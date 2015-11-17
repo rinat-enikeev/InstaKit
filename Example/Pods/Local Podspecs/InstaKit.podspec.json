@@ -19,13 +19,18 @@
   "source_files": "Pod/Classes/**/*",
   "resource_bundles": {
     "InstaKit": [
-      "Pod/Classes/**/*.xcdatamodeld"
+      "Pod/Classes/**/*.{xcdatamodel,xcdatamodeld}"
     ]
   },
+  "public_header_files": "Pod/Classes/**/*.h",
   "frameworks": "CoreData",
   "dependencies": {
     "RestKit": [
 
     ]
-  }
+  },
+  "prefix_header_contents": [
+    "#import <CoreData/CoreData.h>",
+    "#import <RestKit/RestKit.h>"
+  ]
 }

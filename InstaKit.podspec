@@ -14,12 +14,16 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
+
+
   s.resource_bundles = {
-   'InstaKit' => ['Pod/Classes/**/*.xcdatamodeld']
+    'InstaKit' => ['Pod/Classes/**/*.{xcdatamodel,xcdatamodeld}']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+  s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'CoreData'
   s.dependency 'RestKit'
+
+  s.prefix_header_contents = '#import <CoreData/CoreData.h>', '#import <RestKit/RestKit.h>'
 
 end

@@ -7,9 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "REBlockDefinitions.h"
+#import "REInstaBlockDefinitions.h"
+#import "REInstaRKMapper.h"
+
+@class RKManagedObjectStore;
+@class RKObjectManager;
 
 @interface REInstaPostService : NSObject
+
+-(id)initWithStore:(RKManagedObjectStore *)store
+        rkMapper:(REInstaRKMapper*)mapper
+            rkObjectManager:(RKObjectManager*)objectManager
+               clientId:(NSString*)clientId;
 
 /**
  *  @brief  Loads most recent media popular posts from Instagram.

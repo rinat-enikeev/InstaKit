@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class RKManagedObjectStore;
+@class RKEntityMapping;
+
 @interface REInstaRKMapper : NSObject
+
+@property (nonatomic, strong, readonly) RKEntityMapping* postDeep;
+
+-(id)initWithRKStore:(RKManagedObjectStore*)store;
 
 @end

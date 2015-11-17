@@ -1,5 +1,6 @@
 #import <UIKit/UIKit.h>
 
+#import "InstaKit.h"
 #import "REInstaRKMapper.h"
 #import "REInstaAttribution+CoreDataProperties.h"
 #import "REInstaAttribution.h"
@@ -11,8 +12,6 @@
 #import "REInstaImage.h"
 #import "REInstaLocation+CoreDataProperties.h"
 #import "REInstaLocation.h"
-#import "REInstaPosition+CoreDataProperties.h"
-#import "REInstaPosition.h"
 #import "REInstaPost+CoreDataProperties.h"
 #import "REInstaPost.h"
 #import "REInstaRelationship+CoreDataProperties.h"
@@ -25,6 +24,7 @@
 #import "REInstaUserOnPost.h"
 #import "REInstaVideo+CoreDataProperties.h"
 #import "REInstaVideo.h"
+#import "REInstaBlockDefinitions.h"
 #import "REInstaPostService.h"
 
 FOUNDATION_EXPORT double InstaKitVersionNumber;

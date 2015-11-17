@@ -11,21 +11,23 @@
 #import "REInstaPost.h"
 #import "REInstaUser.h"
 #import "REInstaImage.h"
-#import <RestKit/RestKit.h>
 
 @interface REInstaRKMapper()
 @property (nonatomic, strong) RKManagedObjectStore* store;
 @property (nonatomic, strong) RKEntityMapping* postDeep;
-@property (nonatomic, strong) RKEntityMapping* user; //
-@property (nonatomic, strong) RKEntityMapping* image; //
+@property (nonatomic, strong) RKEntityMapping* user;
+@property (nonatomic, strong) RKEntityMapping* image;
 @end
 
 @implementation REInstaRKMapper
 
--(id)initWithRKManagedObjectStore:(RKManagedObjectStore*)store {
+-(id)initWithRKStore:(RKManagedObjectStore*)store {
     self = [super init];
     if (self) {
         self.store = store;
+        [self mapImage];
+        [self mapUser];
+        [self mapPostDeep];
     }
     return self;
 }
@@ -35,9 +37,6 @@
     self.postDeep = [RKEntityMapping mappingForEntityForName:NSStringFromClass([REInstaPost class]) inManagedObjectStore:_store];
     
     // 1. Attributes
-    [_postDeep addAttributeMappingFromKeyOfRepresentationToAttribute:@"comments"];
-    [_postDeep addAttributeMappingFromKeyOfRepresentationToAttribute:@"likes"];
-    
     [_postDeep addAttributeMappingsFromDictionary:
         @{
          @"id"             : @"identifier",
@@ -83,8 +82,6 @@
 
 -(void)mapUser {
     self.user = [RKEntityMapping mappingForEntityForName:NSStringFromClass([REInstaUser class]) inManagedObjectStore:_store];
-    
-    [_user addAttributeMappingFromKeyOfRepresentationToAttribute:@"counts"];
     
     [_user addAttributeMappingsFromDictionary:
      @{
