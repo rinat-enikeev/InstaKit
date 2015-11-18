@@ -2,7 +2,7 @@
 //  REInstaRelationship+CoreDataProperties.h
 //  Pods
 //
-//  Created by Rinat Enikeev on 17/11/15.
+//  Created by Rinat Enikeev on 18/11/15.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface REInstaRelationship (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *outgoingStatus;
 @property (nullable, nonatomic, retain) NSString *incomingStatus;
+@property (nullable, nonatomic, retain) NSString *outgoingStatus;
 @property (nullable, nonatomic, retain) REInstaUser *owner;
 @property (nullable, nonatomic, retain) REInstaUser *requestedUser;
 

@@ -24,17 +24,17 @@
 @dynamic userHasLiked;
 @dynamic attribution;
 @dynamic author;
+@dynamic caption;
+@dynamic comments;
 @dynamic imageLow;
 @dynamic imageStd;
 @dynamic imageThumb;
 @dynamic likers;
+@dynamic location;
 @dynamic tags;
 @dynamic usersOnPost;
 @dynamic videoLowBand;
 @dynamic videoLowRes;
 @dynamic videoStdRes;
-@dynamic caption;
-@dynamic location;
-@dynamic comments;
 
 @end

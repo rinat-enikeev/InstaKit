@@ -2,7 +2,7 @@
 //  REInstaVideo+CoreDataProperties.m
 //  Pods
 //
-//  Created by Rinat Enikeev on 17/11/15.
+//  Created by Rinat Enikeev on 18/11/15.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

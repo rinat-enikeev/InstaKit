@@ -2,7 +2,7 @@
 //  REInstaUser+CoreDataProperties.m
 //  Pods
 //
-//  Created by Rinat Enikeev on 17/11/15.
+//  Created by Rinat Enikeev on 18/11/15.
 //
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,24 +13,24 @@
 
 @implementation REInstaUser (CoreDataProperties)
 
-@dynamic identifier;
-@dynamic username;
-@dynamic fullName;
 @dynamic bio;
-@dynamic profilePictureUrl;
-@dynamic profilePictureLocalPath;
-@dynamic website;
-@dynamic followsCount;
-@dynamic followedByCount;
-@dynamic mediaCount;
 @dynamic firstName;
+@dynamic followedByCount;
+@dynamic followsCount;
+@dynamic fullName;
+@dynamic identifier;
 @dynamic lastName;
+@dynamic mediaCount;
+@dynamic profilePictureLocalPath;
+@dynamic profilePictureUrl;
+@dynamic username;
+@dynamic website;
 @dynamic captions;
 @dynamic comments;
 @dynamic likes;
-@dynamic posts;
-@dynamic relationships;
-@dynamic relationshipRequests;
 @dynamic onPostPhotos;
+@dynamic posts;
+@dynamic relationshipRequests;
+@dynamic relationships;
 
 @end
