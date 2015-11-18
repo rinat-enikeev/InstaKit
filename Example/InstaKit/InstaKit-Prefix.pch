@@ -14,5 +14,6 @@
     @import UIKit;
     @import Foundation;
     #import <InstaKit/InstaKit.h>
-    #import <STXInstagramFeedView/STXDynamicTableView.h>
+    #import <InstaModel/InstaModel.h>
+
 #endif

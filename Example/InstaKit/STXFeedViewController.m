@@ -1,182 +1,185 @@
-////
-////  STXViewController.m
-////  STXInstagramFeedView
-////
-////  Created by Rinat Enikeev on 11/16/2015.
-////  Copyright (c) 2015 Rinat Enikeev. All rights reserved.
-////
 //
-//#import "STXFeedViewController.h"
-//#import <STXInstagramFeedView/STXDynamicTableView.h>
-//#import <InstaKit/InstaKit.h>
+//  STXViewController.m
+//  STXInstagramFeedView
 //
-////#import "STXPost.h"
-//#import "UIImageView+Circling.h"
+//  Created by Rinat Enikeev on 11/16/2015.
+//  Copyright (c) 2015 Rinat Enikeev. All rights reserved.
 //
-//@interface STXFeedViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate, STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
-//
-//@property (weak, nonatomic) IBOutlet UITableView *tableView;
-//@property (strong, nonatomic) UIActivityIndicatorView *activityIndicatorView;
-//
-//@property (strong, nonatomic) STXFeedTableViewDataSource *tableViewDataSource;
-//@property (strong, nonatomic) STXFeedTableViewDelegate *tableViewDelegate;
-//
-//@end
-//
-//@implementation STXFeedViewController
-//
-//- (void)viewDidLoad
-//{
-//    [super viewDidLoad];
-//    
-//    self.title = NSLocalizedString(@"Feed", nil);
-//    
-//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//    
-//    STXFeedTableViewDataSource *dataSource = [[STXFeedTableViewDataSource alloc] initWithController:self tableView:self.tableView];
-//    self.tableView.dataSource = dataSource;
-//    self.tableViewDataSource = dataSource;
-//    
-//    STXFeedTableViewDelegate *delegate = [[STXFeedTableViewDelegate alloc] initWithController:self];
-//    self.tableView.delegate = delegate;
-//    self.tableViewDelegate = delegate;
-//    
-//    self.activityIndicatorView = [self activityIndicatorViewOnView:self.view];
-//    
-//    [self loadFeed];
-//}
-//
-//- (void)dealloc
-//{
-//    // To prevent crash when popping this from navigation controller
-//    self.tableView.delegate = nil;
-//    self.tableView.dataSource = nil;
-//}
-//
-//- (void)viewDidAppear:(BOOL)animated
-//{
-//    [super viewDidAppear:animated];
-//    
-//    // This will be notified when the Dynamic Type user setting changes (from the system Settings app)
-//    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentSizeCategoryChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
-//    
-//    if ([self.tableViewDataSource.posts count] == 0) {
-//        [self.activityIndicatorView startAnimating];
-//    }
-//}
-//
-//- (void)viewDidDisappear:(BOOL)animated
-//{
-//    [super viewDidDisappear:animated];
-//    
-//    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIContentSizeCategoryDidChangeNotification object:nil];
-//}
-//
-//- (void)didReceiveMemoryWarning
-//{
-//    [super didReceiveMemoryWarning];
-//}
-//
-//- (void)contentSizeCategoryChanged:(NSNotification *)notification
-//{
-//    [self.tableView reloadData];
-//}
-//
-//#pragma mark - STXFeedPhotoCellDelegate
-//- (void)feedCellWillBeDisplayed:(STXFeedPhotoCell *)cell
-//{
-//    
-//    cell.postImageView.image = cell.postItem.standardImage;
-//    if (cell.postItem.standardImage == nil) {
-//        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//            NSURL * imageUrl = [cell.postItem standardImageURL];
-//            NSData* data = [NSData dataWithContentsOfURL:imageUrl];
-//            UIImage* postStdImage = [UIImage imageWithData:data];
-//            dispatch_async(dispatch_get_main_queue(), ^(void){
-//                cell.postItem.standardImage = postStdImage;
-//                cell.postImageView.image = postStdImage;
-//            });
-//        });
-//    }
-//    
-//    cell.profileImageView.image = cell.postItem.user.profilePicture;
-//    
-//    if (cell.postItem.user.profilePicture == nil) {
-//        dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//            NSURL * imageUrl = [cell.postItem.user profilePictureURL];
-//            NSData* data = [NSData dataWithContentsOfURL:imageUrl];
-//            UIImage* profilePicture = [UIImage imageWithData:data];
-//            
-//            dispatch_async(dispatch_get_main_queue(), ^(void){
-//                cell.postItem.user.profilePicture = profilePicture;
-//                // todo: add ProfilePlaceholder image
-//                [cell.profileImageView setCircledImageFrom:profilePicture placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] borderWidth:2];
-//            });
-//        });
-//    }
-//}
-//
-//#pragma mark - Feed
-//
-//- (void)loadFeed
-//{
-//    NSString *feedPath = [[NSBundle mainBundle] pathForResource:@"instagram_media_popular" ofType:@"json"];
-//    
-//    NSError *error;
-//    NSData *jsonData = [NSData dataWithContentsOfFile:feedPath options:NSDataReadingMappedIfSafe error:&error];
-//    if (jsonData) {
-//        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:&error];
-//        if (error) {
-//            NSLog(@"%@", error);
-//        }
-//        
-//        NSDictionary *instagramPopularMediaDictionary = jsonObject;
-//        if (instagramPopularMediaDictionary) {
-//            NSArray *mediaDataArray = [instagramPopularMediaDictionary valueForKey:@"data"];
-//            
-//            NSMutableArray *posts = [NSMutableArray array];
-//            for (NSDictionary *mediaDictionary in mediaDataArray) {
-//                STXPost *post = [[STXPost alloc] initWithDictionary:mediaDictionary];
-//                [posts addObject:post];
-//            }
-//            
-//            self.tableViewDataSource.posts = [posts copy];
-//            
-//            [self.tableView reloadData];
-//            
-//        } else {
-//            if (error) {
-//                NSLog(@"%@", error);
-//            }
-//        }
-//    } else {
-//        if (error) {
-//            NSLog(@"%@", error);
-//        }
-//    }
-//    
-//}
-//
-//#pragma mark - User Action Cell
-//
-//- (void)userDidLike:(STXUserActionCell *)userActionCell
-//{
-//    
-//}
-//
-//- (void)userDidUnlike:(STXUserActionCell *)userActionCell
-//{
-//    
-//}
-//
-//- (void)userWillComment:(STXUserActionCell *)userActionCell
-//{
-//    
-//}
-//
-//- (void)userWillShare:(STXUserActionCell *)userActionCell
-//{
-//    
-//}
-//
-//@end
+
+#import "STXFeedViewController.h"
+#import <STXInstagramFeedView/STXDynamicTableView.h>
+#import <InstaKit/InstaKit.h>
+#import <InstaModel/InstaModel.h>
+
+
+@interface STXFeedViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate, STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
+
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicatorView;
+
+@property (strong, nonatomic) STXFeedTableViewDataSource *tableViewDataSource;
+@property (strong, nonatomic) STXFeedTableViewDelegate *tableViewDelegate;
+
+@property (strong, nonatomic) InstaKit* instaKit;
+
+@end
+
+@implementation STXFeedViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.instaKit = [[InstaKit alloc] initWithClientId:@"24fc1af302d3442c86e5e3c1e8708015" dbFileName:@"dbFile"];
+    
+    self.title = NSLocalizedString(@"Feed", nil);
+    
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    STXFeedTableViewDataSource *dataSource = [[STXFeedTableViewDataSource alloc] initWithController:self tableView:self.tableView];
+    self.tableView.dataSource = dataSource;
+    self.tableViewDataSource = dataSource;
+    
+    STXFeedTableViewDelegate *delegate = [[STXFeedTableViewDelegate alloc] initWithController:self];
+    self.tableView.delegate = delegate;
+    self.tableViewDelegate = delegate;
+    
+    self.activityIndicatorView = [self activityIndicatorViewOnView:self.view];
+    
+    [self loadFeed];
+    
+    // Initialize Refresh Control
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(loadFeed) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)dealloc
+{
+    // To prevent crash when popping this from navigation controller
+    self.tableView.delegate = nil;
+    self.tableView.dataSource = nil;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    // This will be notified when the Dynamic Type user setting changes (from the system Settings app)
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(contentSizeCategoryChanged:) name:UIContentSizeCategoryDidChangeNotification object:nil];
+    
+    if ([self.tableViewDataSource.posts count] == 0) {
+        [self.activityIndicatorView startAnimating];
+    }
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIContentSizeCategoryDidChangeNotification object:nil];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+- (void)contentSizeCategoryChanged:(NSNotification *)notification
+{
+    [self.tableView reloadData];
+}
+
+#pragma mark - STXFeedPhotoCellDelegate
+- (void)feedCellWillBeDisplayed:(STXFeedPhotoCell *)cell
+{
+    
+    NSObject<InstaImage>* imgStd = cell.postItem.imageStd;
+    if (imgStd.localPath == nil) {
+        [[_instaKit blobService] renewImageBlobFor:imgStd withProgress:nil success:^(NSObject<InstaImage> *image) {
+            [self updateStdImageInPost:cell];
+        } failure:^(NSError *error) {
+            NSLog(@"%@", error.localizedDescription);
+        }];
+    } else {
+        [self updateStdImageInPost:cell];
+    }
+    
+    NSObject<InstaUser>* author = cell.postItem.author;
+    if (author.profilePictureLocalPath == nil) {
+        [[_instaKit blobService] renewProfileImageBlobFor:author withProgress:nil success:^(NSObject<InstaUser> *user) {
+            [self updateProfilePictureIn:cell];
+        } failure:^(NSError *error) {
+            NSLog(@"%@", error.localizedDescription);
+        }];
+        
+    } else {
+        [self updateProfilePictureIn:cell];
+    }
+}
+
+/**
+ *  @brief  Assume thatcell.postItem.imageStd.localPath is not null.
+ */
+-(void)updateStdImageInPost:(STXFeedPhotoCell *)cell {
+    NSObject<InstaImage>* imgStd = cell.postItem.imageStd;
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage* postStdImage = [UIImage imageWithContentsOfFile:imgStd.localPath];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            cell.postImageView.image = postStdImage;
+        });
+    });
+}
+
+/**
+ *  @brief  Assume that cell.postItem.author.profilePictureLocalPath is not null.
+ */
+-(void)updateProfilePictureIn:(STXFeedPhotoCell *)cell {
+    NSObject<InstaUser>* author = cell.postItem.author;
+    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage* authorImage = [UIImage imageWithContentsOfFile:author.profilePictureLocalPath];
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            [cell.profileImageView setCircledImageFrom:authorImage placeholderImage:[UIImage imageNamed:@"ProfilePlaceholder"] borderWidth:2];
+        });
+    });
+}
+
+
+#pragma mark - Feed
+- (void)loadFeed
+{
+    
+    [[_instaKit postService] renewMediaPopularWithProgress:nil success:^(NSArray *objects) {
+        self.tableViewDataSource.posts = [objects copy];
+        [self.tableView reloadData];
+        [self.activityIndicatorView stopAnimating];
+        [self.refreshControl endRefreshing];
+    } failure:^(NSError *error) {
+        [self.activityIndicatorView stopAnimating];
+        [self.refreshControl endRefreshing];
+        NSLog(@"%@", error);
+    }];
+    
+    
+}
+#pragma mark - User Action Cell
+
+- (void)userDidLike:(STXUserActionCell *)userActionCell
+{
+    
+}
+
+- (void)userDidUnlike:(STXUserActionCell *)userActionCell
+{
+    
+}
+
+- (void)userWillComment:(STXUserActionCell *)userActionCell
+{
+    
+}
+
+- (void)userWillShare:(STXUserActionCell *)userActionCell
+{
+    
+}
+
+@end
