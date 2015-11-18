@@ -43,10 +43,10 @@
 @property (nullable, nonatomic, retain, readonly) NSObject<InstaVideo> *videoLowRes;
 @property (nullable, nonatomic, retain, readonly) NSObject<InstaVideo> *videoStdRes;
 @property (nullable, nonatomic, retain, readonly) NSObject<InstaAttribution> *attribution;
-@property (nullable, nonatomic, retain, readonly) NSSet<NSObject<InstaUser> *> *likers;
-@property (nullable, nonatomic, retain, readonly) NSSet<NSObject<InstaTag> *>  *tags;
-@property (nullable, nonatomic, retain, readonly) NSSet<NSObject<InstaUserOnPost> *> *usersOnPost;
-@property (nullable, nonatomic, retain, readonly) NSSet<NSObject<InstaComment> *> *comments;
+@property (nullable, nonatomic, retain, readonly) NSOrderedSet<NSObject<InstaUser> *> *likers;
+@property (nullable, nonatomic, retain, readonly) NSOrderedSet<NSObject<InstaTag> *>  *tags;
+@property (nullable, nonatomic, retain, readonly) NSOrderedSet<NSObject<InstaUserOnPost> *> *usersOnPost;
+@property (nullable, nonatomic, retain, readonly) NSOrderedSet<NSObject<InstaComment> *> *comments;
 
 @end
 

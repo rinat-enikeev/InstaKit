@@ -17,7 +17,7 @@
 @protocol InstaAttribution <NSObject>
 
 @property (nullable, nonatomic, retain, readonly) NSString *name;
-@property (nullable, nonatomic, retain, readonly) NSSet<NSObject<InstaPost> *> *posts;
+@property (nullable, nonatomic, retain, readonly) NSOrderedSet<NSObject<InstaPost> *> *posts;
 
 @end
 
