@@ -10,7 +10,6 @@
 #define InstaPost_h
 
 @import Foundation;
-@import UIKit;
 
 @protocol InstaUser;
 @protocol InstaImage;

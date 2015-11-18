@@ -10,13 +10,10 @@
 #define InstaImage_h
 
 @import Foundation;
-@import UIKit;
 
 @protocol InstaPost;
 
 @protocol InstaImage <NSObject>
-
-@property (nullable, nonatomic, strong) UIImage *image;
 
 @property (nullable, nonatomic, retain, readonly) NSNumber *height;
 @property (nullable, nonatomic, retain, readonly) NSString *localPath;

@@ -10,7 +10,6 @@
 #define InstaUser_h
 
 @import Foundation;
-@import UIKit;
 
 @protocol InstaCaption;
 @protocol InstaComment;
@@ -19,10 +18,7 @@
 @protocol InstaRelationship;
 @protocol InstaUserOnPost;
 
-
 @protocol InstaUser <NSObject>
-
-@property (nullable, nonatomic, strong) UIImage *profilePicture;
 
 @property (nullable, nonatomic, retain, readonly) NSString *identifier;
 @property (nullable, nonatomic, retain, readonly) NSString *username;

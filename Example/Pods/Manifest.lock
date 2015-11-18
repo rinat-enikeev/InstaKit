@@ -1,11 +1,11 @@
 PODS:
   - AFNetworking (1.3.4)
   - Expecta (1.0.5)
-  - InstaKit (0.1.3):
+  - InstaKit (0.1.4):
     - AFNetworking (~> 1.3.4)
     - InstaModel
     - RestKit
-  - InstaModel (0.1.4)
+  - InstaModel (0.1.5)
   - ISO8601DateFormatterValueTransformer (0.6.1):
     - RKValueTransformers (~> 1.1.0)
   - MHPrettyDate (1.1.1)
@@ -55,8 +55,8 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  InstaKit: 7c83d9b021ba5b947a466436ab6c58bc477de269
-  InstaModel: 7dfc2522bcb8fe6749a1d0517393ec836880e12e
+  InstaKit: e1e2a1fd2427a39141afd288cd863fb327832e31
+  InstaModel: 4f6543c563f65a63491c755e4be372dc2073d95b
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   MHPrettyDate: e0e5975041f0210c0542f4c5d7e3e44d1a8537be
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb

@@ -1,0 +1,1 @@
+../../../../../Pod/Classes/Adapters/REInstaTag+InstaTag.h

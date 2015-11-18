@@ -10,7 +10,6 @@
 #define InstaVideo_h
 
 @import Foundation;
-@import UIKit;
 
 @protocol InstaPost;
 
