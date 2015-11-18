@@ -17,6 +17,7 @@
 @property (nonatomic, strong) RKEntityMapping* postDeep;
 @property (nonatomic, strong) RKEntityMapping* user;
 @property (nonatomic, strong) RKEntityMapping* image;
+@property (nonatomic, strong) RKEntityMapping* comment;
 @end
 
 @implementation REInstaRKMapper
@@ -28,6 +29,7 @@
         [self mapImage];
         [self mapUser];
         [self mapPostDeep];
+        [self mapComment];
     }
     return self;
 }
@@ -70,10 +72,14 @@
     RKRelationshipMapping* likersMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"likes.data" toKeyPath:@"likers" withMapping:_user];
     [_postDeep addPropertyMapping:likersMapping];
     
+    RKRelationshipMapping* commentsMapping = [RKRelationshipMapping relationshipMappingFromKeyPath:@"comments.data" toKeyPath:@"comments" withMapping:_comment];
+    [_postDeep addPropertyMapping:commentsMapping];
+    
 }
 
-// TODO mapPostDeep
+// TODO mapPostDeep connections?
 //@property (nullable, nonatomic, retain) NSSet<REInstaUser *> *likers;
+//@property (nullable, nonatomic, retain) NSOrderedSet<REInstaComment *> *comments;
 //@property (nullable, nonatomic, retain) NSSet<REInstaTag *> *tags;
 //@property (nullable, nonatomic, retain) REInstaVideo *videoLowBand;
 //@property (nullable, nonatomic, retain) REInstaVideo *videoLowRes;
@@ -129,6 +135,24 @@
 //@property (nullable, nonatomic, retain) NSSet<REInstaPost *> *postStd;
 //@property (nullable, nonatomic, retain) NSSet<REInstaPost *> *postThumb;
 
+
+-(void)mapComment {
+    self.comment = [RKEntityMapping mappingForEntityForName:NSStringFromClass([REInstaComment class]) inManagedObjectStore:_store];
+    
+    [_image addAttributeMappingsFromDictionary:
+     @{
+       @"created_time" : @"createdTimestamp",
+       @"id"    : @"identifier",
+       @"text"  : @"text"
+       }];
+    
+    RKRelationshipMapping* autorRel = [RKRelationshipMapping relationshipMappingFromKeyPath:@"from" toKeyPath:@"from" withMapping:_user];
+    [_postDeep addPropertyMapping:autorRel];
+    
+}
+
+// TODO mapComment
+//@property (nullable, nonatomic, retain) REInstaPost *post;
 
 
 @end
