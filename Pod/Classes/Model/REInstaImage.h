@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface REInstaImage : NSManagedObject
 
-@property (nullable, nonatomic, strong) UIImage *image;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -11,6 +11,4 @@
 
 @implementation REInstaImage
 
-@synthesize image;
-
 @end

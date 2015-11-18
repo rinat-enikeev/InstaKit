@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface REInstaUser : NSManagedObject
 
-@property (nullable, nonatomic, strong) UIImage *profilePicture;
-
 @end
 
 NS_ASSUME_NONNULL_END

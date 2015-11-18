@@ -15,6 +15,4 @@
 
 @implementation REInstaUser
 
-@synthesize profilePicture;
-
 @end
