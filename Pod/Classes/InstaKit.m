@@ -20,6 +20,7 @@ NSString *const kInstagramBaseUrl = @"https://api.instagram.com/v1/";
 
 // services
 @property (strong, nonatomic) REInstaPostService* postService;
+@property (strong, nonatomic) REInstaBlobService* blobService;
 
 @end
 
@@ -51,6 +52,8 @@ NSString *const kInstagramBaseUrl = @"https://api.instagram.com/v1/";
         
         // 5. Services
         self.postService = [[REInstaPostService alloc] initWithStore:_store rkMapper:_mapper rkObjectManager:_objectManager clientId:_clientId];
+        
+        self.blobService = [[REInstaBlobService alloc] init];
         
     }
     return self;

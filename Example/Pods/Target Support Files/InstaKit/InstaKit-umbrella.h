@@ -36,6 +36,7 @@
 #import "REInstaUserOnPost.h"
 #import "REInstaVideo+CoreDataProperties.h"
 #import "REInstaVideo.h"
+#import "REInstaBlobService.h"
 #import "REInstaBlockDefinitions.h"
 #import "REInstaPostService.h"
 

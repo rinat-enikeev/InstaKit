@@ -29,10 +29,33 @@
 //            NSLog(@"type: %@", post.type);
 //            NSObject<InstaUser> * user = post.author;
 //            NSLog(@"username: %@", user.username);
-            NSOrderedSet<NSObject<InstaComment> *>* comments = post.comments;
-            for (NSObject<InstaComment> * comment in comments) {
-                NSLog(@"liker: %@", comment.text);
-            }
+//            NSOrderedSet<NSObject<InstaComment> *>* comments = post.comments;
+//            for (NSObject<InstaComment> * comment in comments) {
+//                NSLog(@"liker: %@", comment.text);
+//            }
+//            NSObject<InstaImage>* image = post.imageStd;
+//            [[kit blobService] renewImageBlobFor:image withProgress:^(NSUInteger bytes, long long totalBytes, long long totalBytesExpected) {
+//                NSLog(@"Progress: %tu / %lld", bytes, totalBytes);
+//            } success:^(NSObject<InstaImage> *img) {
+//                NSLog(@"%@", img.localPath);
+//                UIImage* image = [UIImage imageWithContentsOfFile:img.localPath];
+//                NSAssert(image != nil, @"Image downloaded");
+//            } failure:^(NSError *error) {
+//                NSLog(@"%@", error.localizedDescription);
+//            }];
+            
+            
+            NSObject<InstaUser>* user = post.author;
+            [[kit blobService] renewProfileImageBlobFor:user withProgress:^(NSUInteger bytes, long long totalBytes, long long totalBytesExpected) {
+                NSLog(@"Progress: %tu / %lld", bytes, totalBytes);
+            } success:^(NSObject<InstaUser> *user) {
+                NSLog(@"%@", user.profilePictureLocalPath);
+                UIImage* image = [UIImage imageWithContentsOfFile:user.profilePictureLocalPath];
+                NSAssert(image != nil, @"Image downloaded");
+            } failure:^(NSError *error) {
+                NSLog(@"%@", error.localizedDescription);
+            }];
+            
         }
     } failure:^(NSError *error) {
         NSLog(@"%@", error.localizedDescription);
