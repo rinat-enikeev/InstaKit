@@ -26,10 +26,12 @@
     self = [super init];
     if (self) {
         self.store = store;
+        
+        // ORDER IS IMPORTANT!
         [self mapImage];
         [self mapUser];
-        [self mapPostDeep];
         [self mapComment];
+        [self mapPostDeep];
     }
     return self;
 }
@@ -139,15 +141,17 @@
 -(void)mapComment {
     self.comment = [RKEntityMapping mappingForEntityForName:NSStringFromClass([REInstaComment class]) inManagedObjectStore:_store];
     
-    [_image addAttributeMappingsFromDictionary:
+    [_comment addAttributeMappingsFromDictionary:
      @{
        @"created_time" : @"createdTimestamp",
        @"id"    : @"identifier",
        @"text"  : @"text"
        }];
     
+    [_comment setIdentificationAttributes:@[@"identifier"]];
+    
     RKRelationshipMapping* autorRel = [RKRelationshipMapping relationshipMappingFromKeyPath:@"from" toKeyPath:@"from" withMapping:_user];
-    [_postDeep addPropertyMapping:autorRel];
+    [_comment addPropertyMapping:autorRel];
     
 }
 
