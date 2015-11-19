@@ -412,7 +412,6 @@
 		CAAD73ADF857DF2F9DCD8CF6F6A85E79 /* RKStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = DA25110F09435729FF5698DAF1A37DB9 /* RKStringTokenizer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		CAF388358BBCBDCCA7AA601A2562047F /* RestKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1072E20FCF887195B34997EFA9C1E128 /* RestKit.framework */; };
 		CB49ACAC3A069ED3D0590FA4E949BBA8 /* RKPaginator.h in Headers */ = {isa = PBXBuildFile; fileRef = BB7C5D88C6BCB8019F2F03B25E3C3ACA /* RKPaginator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC0B25EFA14CA6DF1CDAF20CC06B82CA /* contents in Sources */ = {isa = PBXBuildFile; fileRef = E3B3CFE32D75A735ABDFC8277DB18765 /* contents */; };
 		CD30BC584C369ED3CD2B73C7288F1440 /* TKStateMachine.h in Headers */ = {isa = PBXBuildFile; fileRef = FE4C883C28E26E885A6C34A7FB673673 /* TKStateMachine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD600F9208895AA16A3875D40B8EC647 /* REInstaLocation+CoreDataProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = CA75D18DB6757C366A8A66AFDAC2FD66 /* REInstaLocation+CoreDataProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CD6D6FC15AEF5AC7DB82955041693F21 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AAE51960397D201A2C9CC1D30692B6 /* Security.framework */; };
@@ -3891,7 +3890,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC0B25EFA14CA6DF1CDAF20CC06B82CA /* contents in Sources */,
 				15A547C3947B126833B52086147FF3CD /* InstaKit-dummy.m in Sources */,
 				0448280549A8F09A17653BB965F12043 /* InstaKit.m in Sources */,
 				1FB95213033A968F893665AB0EA3198B /* REInstaAttribution+CoreDataProperties.m in Sources */,
