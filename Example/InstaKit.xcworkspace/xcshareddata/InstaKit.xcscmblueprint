@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "69AEA74015EC05CE84670B3269EE649E0341A515",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "ABD190F6F6FB1F728B372186398C19D5B587C87A" : 0,
+    "69AEA74015EC05CE84670B3269EE649E0341A515" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "07E23673-1014-47B9-A1ED-1E0C4E2BF47E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "ABD190F6F6FB1F728B372186398C19D5B587C87A" : "STXInstagramFeedView\/",
+    "69AEA74015EC05CE84670B3269EE649E0341A515" : "InstaKit\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "InstaKit",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Example\/InstaKit.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:rinat-enikeev\/InstaKit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "69AEA74015EC05CE84670B3269EE649E0341A515"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:rinat-enikeev\/STXInstagramFeedView.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ABD190F6F6FB1F728B372186398C19D5B587C87A"
+    }
+  ]
+}

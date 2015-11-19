@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "InstaKit"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "Instagram Kit with Core Data persistence. "
   s.homepage         = "https://github.com/rinat-enikeev/InstaKit"
   s.license          = 'MIT'
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   }
 
   s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'CoreData'
+  s.frameworks = 'CoreData', 'SystemConfiguration', 'MobileCoreServices'
   s.dependency 'RestKit'
   s.dependency 'AFNetworking', '~> 1.3.4'
   s.dependency 'InstaModel'

@@ -29,4 +29,16 @@
  */
 - (void)renewMediaPopularWithProgress:(REProgressBlock)progress success:(RESuccessBlock)success failure:(REFailureBlock)failure;
 
+/**
+ *  @brief  Fetches posts from local persistent store.
+ *
+ *  @param predicate filter.
+ *  @param limit     maximum number of objects.
+ *
+ *  @return array of NSObject<InstaPost>.
+ */
+-(NSArray<NSObject<InstaPost>*> *)fetchPostsWithPredicate:(NSPredicate*)predicate
+                                          sortDescriptors:(NSArray<NSSortDescriptor *>*)sortDescriptors
+                                                    limit:(NSUInteger)limit error:(NSError**)error;
+
 @end

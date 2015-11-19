@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02A49A9A8B65E54C3260B54F /* Pods_InstaKit_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC60EBAFA1A051B177A784AD /* Pods_InstaKit_Tests.framework */; };
+		0E6872A81BFD55C1004C77F2 /* UIViewController+InformUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6872A71BFD55C1004C77F2 /* UIViewController+InformUser.m */; };
 		0EC131511BFBC040006BD079 /* STXFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC131501BFBC040006BD079 /* STXFeedViewController.m */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -38,6 +39,8 @@
 
 /* Begin PBXFileReference section */
 		0294E3099FBAA020D18C5A24 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0E6872A61BFD55C1004C77F2 /* UIViewController+InformUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+InformUser.h"; sourceTree = "<group>"; };
+		0E6872A71BFD55C1004C77F2 /* UIViewController+InformUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+InformUser.m"; sourceTree = "<group>"; };
 		0EC1314F1BFBC03F006BD079 /* STXFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STXFeedViewController.h; sourceTree = "<group>"; };
 		0EC131501BFBC040006BD079 /* STXFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STXFeedViewController.m; sourceTree = "<group>"; };
 		33F8AE33E25091616374CDEB /* Pods-InstaKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaKit_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaKit_Tests/Pods-InstaKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E6872A21BFD55A9004C77F2 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				0E6872A61BFD55C1004C77F2 /* UIViewController+InformUser.h */,
+				0E6872A71BFD55C1004C77F2 /* UIViewController+InformUser.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +145,7 @@
 		6003F593195388D20070C39A /* Example for InstaKit */ = {
 			isa = PBXGroup;
 			children = (
+				0E6872A21BFD55A9004C77F2 /* Categories */,
 				6003F59C195388D20070C39A /* REAppDelegate.h */,
 				6003F59D195388D20070C39A /* REAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
@@ -397,6 +410,7 @@
 			files = (
 				0EC131511BFBC040006BD079 /* STXFeedViewController.m in Sources */,
 				6003F59E195388D20070C39A /* REAppDelegate.m in Sources */,
+				0E6872A81BFD55C1004C77F2 /* UIViewController+InformUser.m in Sources */,
 				6003F5A7195388D20070C39A /* REViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
