@@ -14,8 +14,6 @@
 #import <TSMessages/TSMessage.h>
 #import "UIViewController+InformUser.h"
 
-NSString *const kInstagramBaseUrl = @"instagram.com";
-
 @interface STXFeedViewController () <STXFeedPhotoCellDelegate, STXLikesCellDelegate, STXCaptionCellDelegate, STXCommentCellDelegate, STXUserActionDelegate>
 
 // views

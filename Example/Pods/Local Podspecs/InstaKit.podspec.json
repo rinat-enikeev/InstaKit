@@ -1,6 +1,6 @@
 {
   "name": "InstaKit",
-  "version": "0.1.5",
+  "version": "0.1.8",
   "summary": "Instagram Kit with Core Data persistence.",
   "homepage": "https://github.com/rinat-enikeev/InstaKit",
   "license": "MIT",
@@ -9,7 +9,7 @@
   },
   "source": {
     "git": "https://github.com/rinat-enikeev/InstaKit.git",
-    "tag": "0.1.5"
+    "tag": "0.1.8"
   },
   "description": "Instagram Kit with Core Data persistence.",
   "platforms": {
@@ -40,6 +40,9 @@
     ]
   },
   "prefix_header_contents": [
+    "#import <Foundation/Foundation.h>",
+    "#import <SystemConfiguration/SystemConfiguration.h>",
+    "#import <MobileCoreServices/MobileCoreServices.h>",
     "#import <CoreData/CoreData.h>",
     "#import <RestKit/RestKit.h>",
     "#import <InstaModel/InstaModel.h>",

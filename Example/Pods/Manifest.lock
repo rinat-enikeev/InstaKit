@@ -2,7 +2,7 @@ PODS:
   - AFNetworking (1.3.4)
   - Expecta (1.0.5)
   - HexColors (2.3.0)
-  - InstaKit (0.1.5):
+  - InstaKit (0.1.8):
     - AFNetworking (~> 1.3.4)
     - InstaModel
     - RestKit
@@ -70,7 +70,7 @@ SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
   HexColors: 6ad3947c3447a055a3aa8efa859def096351fe5f
-  InstaKit: 54a090f1f0ead58efcba0c09e0fb10cfcfb5c4b9
+  InstaKit: 871387e3dd1253fd91bc7ef9b9fc2c5607bff402
   InstaModel: 4f6543c563f65a63491c755e4be372dc2073d95b
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   MHPrettyDate: e0e5975041f0210c0542f4c5d7e3e44d1a8537be
