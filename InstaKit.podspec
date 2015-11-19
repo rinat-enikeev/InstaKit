@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "InstaKit"
-  s.version          = "0.1.6"
+  s.version          = "0.1.7"
   s.summary          = "Instagram Kit with Core Data persistence. "
   s.homepage         = "https://github.com/rinat-enikeev/InstaKit"
   s.license          = 'MIT'

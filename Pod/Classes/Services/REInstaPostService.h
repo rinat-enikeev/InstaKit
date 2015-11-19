@@ -12,6 +12,7 @@
 
 @class RKManagedObjectStore;
 @class RKObjectManager;
+@protocol InstaPost;
 
 @interface REInstaPostService : NSObject
 
